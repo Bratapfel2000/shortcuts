@@ -1,0 +1,21 @@
+ps -a					show all containers
+docker container ls
+
+docker start id/name			start container 
+docker stop id/name			stop container
+
+docker rm $(docker ps -aq)		remove all quiet containers
+docker rm -f $(docker ps -aq)		remove all containers
+
+-d					detached mode (container runs in bg)
+-p					expose on port 
+docker run -d -p 3000:80 -p abc		run abc on 3000
+docker run -d -p 3000:80 -p 8080:80 abc	run abc on several ports
+
+docker run --name website -d -p 3000:80	set name to "website" 
+
+docker exec -it abc bash		execute bash in abc
+
+docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest		shared volume on pwd,  read only
+docker run --name website -v $(pwd):/usr/share/nginx/html -d -p 8080:80 nginx:latest		shared volume on pwd
+	
