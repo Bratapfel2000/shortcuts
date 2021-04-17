@@ -1,0 +1,9 @@
+1) pipenv install --python 3.8
+
+2) pipenv install -r requirements.txt
+
+) settings.py -> add DEBUG variable
+
+) create .env file
+
+) Dockerfile

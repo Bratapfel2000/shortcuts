@@ -4,12 +4,13 @@ docker container ls
 docker start id/name			start container 
 docker stop id/name			stop container
 
+docker rm -f website			remove website container
 docker rm $(docker ps -aq)		remove all quiet containers
 docker rm -f $(docker ps -aq)		remove all containers
 
 -d					detached mode (container runs in bg)
 -p					expose on port 
-docker run -d -p 3000:80 -p abc		run abc on 3000
+docker run -d 3000:80 -p abc		run abc on 3000 from host and port 80 inside container
 docker run -d -p 3000:80 -p 8080:80 abc	run abc on several ports
 
 docker run --name website -d -p 3000:80	set name to "website" 
@@ -18,4 +19,36 @@ docker exec -it abc bash		execute bash in abc
 
 docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest		shared volume on pwd,  read only
 docker run --name website -v $(pwd):/usr/share/nginx/html -d -p 8080:80 nginx:latest		shared volume on pwd
+
+docker run --name website -p 9000:80 -d paufourdm/website	run container on port with name website
+
+building:
+docker build --tag website:latest .
+docker build -t website:latest .
+
+tagging:
+docker tag website:latest website:2
+
+pushing:
+1) docker tag website:latest website:2
+2) docker push paufourdm/website
+
+debugging:
+docker inspect <id>
+
+docker logs cd128c6f551f		shows logs
+docker logs -f cd128c6f551f		shows logs -follow
+
+docker logs --help
+
+
+bash:
+docker exec --help
+
+docker exec -it <id> /bin/bash		-i interactive, -t for sudo tty
+					shell command by search with inspect, in "CMD":..bin/shell bash sh ...
+
+docker build --help
+docker ps --help
+docker run --help
 	
