@@ -1,0 +1,14 @@
+ls folder/	show stuff in folder
+ls /usr		show stuff from root
+ls -l		ls long
+
+ls -li		show inode number (links)
+
+
+
+
+file filename	show type
+
+less		program to view text files
+
+reset		resets terminal

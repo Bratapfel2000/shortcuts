@@ -1,0 +1,57 @@
+df		free disk space
+free		free memory
+
+rm		remove
+rm  *[!.aa]	remove all files not ending with .aa
+
+less		less is more
+		Command			Action
+		Page Up or b		Scroll back one page
+		Page Down or space 	Scroll forward one page
+		Up arrow 		Scroll up one line
+		Down arrow 		Scroll down one line
+		G 			Move to the end of the text file
+		1G or g 		Move to the beginning of the text file
+		/characters 		Search forward to the next occurrence of characters
+		n 			Search for the next occurrence of the previous search
+		h 			Display help screen
+		q 			Quit less
+
+
+
+
+../		one directory above
+.		in current folder
+
+type <command>	types
+
+help <builtin>	
+
+help cd		cd [-L|[-P[-e]]] [dir]
+		This notation says that the command cd may be followed optionally by either a “-L” or a
+		“-P” and further, if the “-P” option is specified the “-e” option may also be included fol-
+		lowed by the optional argument “dir”.
+
+<cmd> --help
+
+man program
+
+man section search_term
+
+apropos partition	finds manuals with "partition" (Same as man -k partition)
+
+whatis ls		name and one line description
+
+info program		gets additional info. ? PgUp/Down/bckspace/space/n//p/u/Enter/q
+
+
+~~~General Tricks~~~
+command1; command2; command3...		several commands with ;
+
+alias foo='cd /usr; ls ; cd -'		creates alias. check first with "type foo"
+unalias foo				unalias foo
+alias					show aliases
+
+~~~special~~~
+man bash
+info coreutils

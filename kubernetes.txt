@@ -1,0 +1,28 @@
+
+kubectl
+
+kubectl create deployment nginx-depl --image=nginx
+
+kubectl apply -f config-file.yaml				execute with config file for deployment
+kubectl delete -f config-file.yaml                              delete with configuration file
+
+
+kubectl get pod							get pods
+
+kubectl get pod -o wide						with additional  infos
+
+kubectl get services
+kubectl get service
+
+kubectl get deployment
+
+kubectl exec -it mongo-depl-5fd6b7d4b4-cxwfw -- bin/bash	bash
+
+
+watch pods:
+kubectl describe pod <podname>
+
+kubectl describe service mongodb-service 
+
+kubectl get pod --watch
+
