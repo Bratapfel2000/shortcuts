@@ -1,0 +1,12 @@
+1.) create django
+
+2.) create .env + pip install django-environ
+
+3. ) connect with AWS bucket, create s3  + user
+
+29:16 https://www.youtube.com/watch?v=Oy71OgKZbOQ
+Access key ID
+AKIARRDM62HOARAM5NPB
+
+Secret access key
+WDhcaiQfrdGuLbuaDnkLoFaOHHAWdCNVdoe8VEmg

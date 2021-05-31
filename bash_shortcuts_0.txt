@@ -4,6 +4,7 @@ ls -l		ls long
 
 ls -li		show inode number (links)
 
+ls -l file	ls -l of file
 
 
 

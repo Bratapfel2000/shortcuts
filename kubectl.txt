@@ -1,0 +1,10 @@
+kubectl get pods
+kubectl get pods -A
+
+kubectl get nodes
+
+kubectl run canbase-docker --image=paufourdm/canbase-docker:latest --port=8888
+kubectl port-forward pod/canbase-docker 8080:8888
+
+kubectl apply -f pod.yml                 apply yaml file
+

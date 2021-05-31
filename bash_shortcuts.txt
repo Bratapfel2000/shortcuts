@@ -17,7 +17,7 @@ less		less is more
 		h 			Display help screen
 		q 			Quit less
 
-
+less filename	shows info
 
 
 ../		one directory above
@@ -55,3 +55,49 @@ alias					show aliases
 ~~~special~~~
 man bash
 info coreutils
+
+
+~~~I/O~~~
+
+ls -l /usr/bin > ls-output.txt	save in ls-output.txt
+ls -l /usr/bin >> ls-output.txt	add to ls-output.txt
+
+
+~~Pipelines~~
+
+command1 | command2
+ls -l /usr/bin/ | less
+ls /bin /usr/bin | sort | less
+
+uniq					Report or Omit Repeated Lines / remove duplicates
+uniq -d				report ruplicates
+
+wc					word count
+wc -l					count lines
+
+
+
+~~~grep~~~  grep patterns
+
+grep pattern [file...]			find text patterns
+
+ls /bin /usr/bin | sort | uniq | grep zip
+
+/dir/ | grep zip 			find in dir
+-i					ignore case
+-v 					print only those that dont match
+
+
+~~~ head/tail~~~(in real time)
+
+head -n 5 ls-output.txt
+tail -n 5 ls-output.txt
+
+tail -f /var/log/messages
+-f				continues until ctrl+c
+
+~~~tee~~~
+ls /usr/bin | tee ls.txt | grep zip		capture and save at same
+
+
+

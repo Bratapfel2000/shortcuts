@@ -1,0 +1,13 @@
+minikube ip		show ip for master node
+minikube ip --node
+minikube ip --node minikube
+minikube ip --node minikube-m02		show ip for node ..m02
+
+minikube delete		delete all
+
+~~~ logs ~~~
+minikube logs
+minikube logs -f				follow logs live
+minikube logs --node=minikube-m02 -f 		logs for specific node
+
+

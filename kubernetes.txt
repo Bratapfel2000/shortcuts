@@ -26,3 +26,4 @@ kubectl describe service mongodb-service
 
 kubectl get pod --watch
 
+kubectl delete pod hello-world

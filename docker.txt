@@ -15,7 +15,7 @@ docker run -d -p 3000:80 -p 8080:80 abc	run abc on several ports
 
 docker run --name website -d -p 3000:80	set name to "website" 
 
-docker exec -it abc bash		execute bash in abc
+docker exec -it <id> bash		execute bash in abc
 
 docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest		shared volume on pwd,  read only
 docker run --name website -v $(pwd):/usr/share/nginx/html -d -p 8080:80 nginx:latest		shared volume on pwd
