@@ -1,1 +1,2 @@
 subl .		open sublime in .
+xdg-open .	open file manager

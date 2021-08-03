@@ -96,7 +96,7 @@ tail -n 5 ls-output.txt
 tail -f /var/log/messages
 -f				continues until ctrl+c
 
-~~~tee~~~
+~~~tee~~~-> Show and save
 ls /usr/bin | tee ls.txt | grep zip		capture and save at same
 
 
